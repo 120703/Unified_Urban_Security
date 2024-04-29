@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  h1 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .button-container button {
+    margin: 10px;
+    padding: 20px 40px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .button-container button:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
+  .button-container button:not(:last-child) {
+    margin-bottom: 0;
+  }
+  hr {
+    width: 80%;
+    margin: 10px 0;
+    border: none;
+    border-top: 2px solid #3498db;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Welcome, User</h1>
+  <div class="button-container">
+    <button><a style="text-decoration: none" href="newentry.html">Today's entry section</a></button>
+    <hr>
+    <button><a style="text-decoration: none" href="PlaPreentriy.html">Previous Entries</a></button>
+    <hr>
+    <button><a style="text-decoration: none" href="Downpladata.html">Download Data</a></button>
+    <hr>
+    <button><a style="text-decoration: none" href="SoSettings.html">Settings</a></button>
+  </div>
+</div>
+</body>
+</html>

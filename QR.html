@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Generator</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  #qr-code {
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div id="qr-code"></div>
+  <button onclick="generateQR()">Generated QR Code</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode@latest/qrcode.min.js"></script>
+<script>
+function generateQR() {
+  var qrDiv = document.getElementById('qr-code');
+  qrDiv.innerHTML = ''; 
+  
+  var qrData = generateRandomString();
+  var qr = new QRCode(qrDiv, {
+    text: qrData,
+    width: 200,
+    height: 200,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H 
+  });
+  
+  
+  alert('Assign QR code with data: ' + qrData + ' to user.');
+}
+
+function generateRandomString() {
+  var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var length = 10;
+  var result = '';
+  for (var i = 0; i < length; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
+}
+</script>
+</body>
+</html>

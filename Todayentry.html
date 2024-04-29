@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Entries</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Today's Entries</h1>
+
+    <table id="entry-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Vehicle Number</th>
+                <th>Name</th>
+                <th>Entry Time</th>
+                <th>Bungalow/Flat</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+    </table>
+
+    <script>
+    
+        function fetchEntries() {
+           
+            const entries = [
+                { date: '2024-04-28', day: 'Thursday', vehicleNumber: 'ABC123', name: 'John Doe', entryTime: '09:00 AM', location: 'Bungalow A' },
+                { date: '2024-04-28', day: 'Thursday', vehicleNumber: 'XYZ789', name: 'Jane Smith', entryTime: '10:30 AM', location: 'Flat 101' },
+
+            ];
+            const tableBody = document.querySelector('#entry-table tbody');
+            tableBody.innerHTML = '';
+            entries.forEach(entry => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${entry.date}</td>
+                    <td>${entry.day}</td>
+                    <td>${entry.vehicleNumber}</td>
+                    <td>${entry.name}</td>
+                    <td>${entry.entryTime}</td>
+                    <td>${entry.location}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+        fetchEntries();
+    </script>
+</body>
+</html>

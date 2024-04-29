@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #cfa6a6;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+        .calendar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        #from-date, #to-date {
+            margin: 0 10px;
+            font-size: 16px;
+            padding: 8px;
+        }
+        #request-button {
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: rgb(235, 226, 226);
+            border: 2px solid #4CAF50;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+        #request-button:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Download Data</h1>
+
+    <form id="data-form">
+        <div class="calendar">
+            <label for="from-date">From:</label>
+            <input type="date" id="from-date">
+            <label for="to-date">To:</label>
+            <input type="date" id="to-date">
+        </div>
+        <button type="button" id="request-button">Request</button>
+    </form>
+
+    <script>
+        document.getElementById('request-button').addEventListener('click', function() {
+            const fromDate = document.getElementById('from-date').value;
+            const toDate = document.getElementById('to-date').value;
+
+            alert(`Request sent for data from ${fromDate} to ${toDate}`);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+    
+    .entry-form {
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin-right: 20px;
+        min-width: 300px;
+    }
+    
+    .entry-form h2 {
+        margin-top: 0;
+    }
+    
+    .entry-form label, .entry-form input {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .entry-form button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .entry-list {
+        min-width: 600px;
+    }
+    
+    .entry-list h2 {
+        margin-top: 0;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    table, th, td {
+        border: 1px solid #ccc;
+    }
+    
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Register</h1>
+    </header>
+    <main>
+        <div class="entry-form">
+            <h2>New Entry</h2>
+            <form id="entry-form">
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                
+                <label for="day">Day:</label>
+                <input type="text" id="day" required>
+                
+                <label for="vehicle">Vehicle Number:</label>
+                <input type="text" id="vehicle" required>
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+
+                <label for="entry-time">Entry Time:</label>
+                <input type="time" id="entry-time" required>
+
+                <label for="office-no">Visiting Office Number:</label>
+                <input type="text" id="office-no" required>
+                
+                <button type="submit">Add Entry</button>
+            </form>
+        </div>
+
+        <div class="entry-list">
+            <h2>Entry List</h2>
+            <table id="entry-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>Vehicle Number</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
+                        <th>E-mail</th>
+                        <th>Entry Time</th>
+                        <th>Visiting Office Number</th>
+                    </tr>
+                </thead>
+                <tbody id="entry-list"></tbody>
+            </table>
+        </div>
+    </main>
+    
+    <script src="script2.js"></script>
+</body>
+</html>
+
